@@ -19,9 +19,37 @@
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1>, <&macro_tap>, <&tog 4>, <&macro_tap>;
+            bindings = <&bt BT_SEL 1>, <&macro_tap>, <&tog 7>, <&macro_tap>;
 
             label = "TO_LAYER_0";
+        };
+
+        mac_bt_layer: mac_bt_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &lt_to_layer_0 0 0>;
+            label = "MAC_BT_LAYER";
+        };
+
+        win_bt_layer: win_bt_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2 &lt_to_layer_0 7 0>;
+            label = "WIN_BT_LAYER";
+        };
+
+        ipad_bt_layer: ipad_bt_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &lt_to_layer_0 3 0>;
+            label = "IPAD_BT_LAYER";
+        };
+
+        win2_bt_layer: win2_bt_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3 &lt_to_layer_0 9 0>;
+            label = "WIN2_BT_LAYER";
         };
     };
 
@@ -49,9 +77,9 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W         &kp E     &kp R                      &kp T                                           &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp Q      &kp W         &kp E     &kp R                      &kp T                                           &kp Y        &kp U  &kp I      &kp O    &kp P
 &kp A      &kp S         &kp D     &kp F                      &kp G                            &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&kp Z      &kp X         &kp C     &kp V                      &kp B        &lt 4 COLON         &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp Z      &kp X         &kp C     &kp V                      &kp B        &lt 7 COLON         &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL  &kp LEFT_ALT  &kp LCMD  &mt LEFT_SHIFT LANGUAGE_1  &lt 1 SPACE  &lt 3 LANGUAGE_1    &kp BACKSPACE  &lt 2 ENTER                             &kp DEL
             >;
 
@@ -62,10 +90,10 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                          &kp F1        &kp F2        &kp F3        &kp F4        &kp F5
-&trans  &trans  &trans  &trans  &trans            &trans        &kp F6        &mkp MB1      &kp F8        &mkp MB2      &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans    &trans        &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_SEL 3  &bt BT_SEL 4                                            &kp F12
+&kp LS(D)          &kp LA(RIGHT_BRACKET)  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp HASH                                        &kp CARET      &kp LA(UP_ARROW)  &kp LA(DOWN)   &kp F4    &kp PLUS
+&kp SPACE          &kp EXCLAMATION        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK                    &win2_bt_layer  &kp LA(LEFT)   &mkp MB1          &kp F8         &mkp MB2  &kp MINUS
+&kp DOUBLE_QUOTES  &kp AMPERSAND          &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN   &ipad_bt_layer    &win_bt_layer   &kp LA(RIGHT)  &kp EQUAL         &kp BACKSPACE  &mkp MB3  &kp LESS_THAN
+&kp DOLLAR         &kp CARET              &trans                &trans                 &trans        &trans            &trans          &kp ENTER                                                 &kp GREATER_THAN
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -93,23 +121,23 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        layer_4 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans            &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans                                                  &bt BT_CLR_ALL
-            >;
-
-            sensor-bindings = <&scroll_up_down>;
-        };
-
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans            &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                &trans
+            >;
+
+            sensor-bindings = <&scroll_up_down>;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans            &trans       &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans                                                  &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -124,6 +152,51 @@
             >;
 
             sensor-bindings = <&scroll_up_down>;
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
+        };
+
+        layer_9 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
+        };
+
+        layer_10 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
+        };
+
+        layer_11 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
         };
     };
 };
