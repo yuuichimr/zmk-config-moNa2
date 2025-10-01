@@ -133,10 +133,10 @@
 
         layer_3 {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                     &trans                &trans        &trans         &trans        &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END            &trans  &kp LC(UP_ARROW)      &kp LG(A)     &trans         &trans        &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans    &trans  &kp LC(LG(UP_ARROW))  &kp LC(LEFT)  &kp LC(RIGHT)  &kp LC(DOWN)  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans    &trans  &trans                                                           &trans
+&kp LA(LG(PIPE))  &kp LS(LG(LEFT_ARROW))  &kp UP_ARROW            &kp LC(TAB)              &kp LA(LC(ENTER))                    &trans            &kp LS(LC(TAB))  &kp LC(TAB)    &kp LG(MINUS)  &kp LG(PLUS)
+&kp TAB           &kp LS(LG(RIGHT))       &kp LA(LC(LEFT_ARROW))  &kp LC(LA(RIGHT))        &kp LA(LC(G))                &trans  &kp LC(UP_ARROW)  &kp LG(A)        &kp LG(C)      &kp LG(V)      &kp LS(LG(T))
+&mkp MB4          &mkp MB5                &kp LC(LA(D))           &kp LC(LA(RIGHT_ARROW))  &kp LA(LC(F))      &trans    &trans  &kp LG(UP_ARROW)  &kp LC(LEFT)     &kp LC(RIGHT)  &kp LC(DOWN)   &trans
+&trans            &trans                  &trans                  &trans                   &trans             &trans    &trans  &trans                                                           &trans
             >;
 
             sensor-bindings =
