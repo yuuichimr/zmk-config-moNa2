@@ -111,7 +111,7 @@
 
         layer_1 {
             bindings = <
-&shift_up_D        &kp LA(RIGHT_BRACKET)  &kp LEFT_BRACE        &kp LS(RIGHT_BRACKET)  &kp HASH                                        &kp CARET      &kp LA(UP_ARROW)  &kp LA(DOWN)   &kp F4    &kp PLUS
+&shift_up_D        &kp LA(RIGHT_BRACKET)  &kp LEFT_BRACE        &kp LS(RIGHT_BRACKET)  &kp HASH                                        &kp CARET      &kp LA(UP_ARROW)  &kp LA(DOWN)   &tog_ls_on    &kp PLUS
 &kp SPACE          &kp EXCLAMATION        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK                    &win2_bt_layer  &kp LA(LEFT)   &mkp MB1          &kp F8         &mkp MB2  &kp MINUS
 &kp DOUBLE_QUOTES  &kp AMPERSAND          &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN   &ipad_bt_layer    &win_bt_layer   &kp LA(RIGHT)  &kp EQUAL         &kp BACKSPACE  &mkp MB3  &kp LESS_THAN
 &kp DOLLAR         &kp CARET              &trans                &trans                 &trans        &trans            &trans          &kp ENTER                                                 &kp GREATER_THAN
