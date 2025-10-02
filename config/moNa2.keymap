@@ -120,6 +120,7 @@
             sensor-bindings =
       <&scroll_left_right>,
       <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
 
         layer_2 {
             bindings = <
