@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: yuuichimr
       url-base: https://github.com/yuuichimr
+    - name: zettaface
+      url-base: https://github.com/zettaface
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -21,6 +23,9 @@ manifest:
       revision: v1
     - name: zmk-rgbled-widget  # <-- new entry
       remote: caksoylar
+      revision: main
+    - name: zmk-input-processor-keybind
+      remote: zettaface
       revision: main
   self:
     path: config
