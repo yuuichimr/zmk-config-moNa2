@@ -91,14 +91,14 @@
 
             tap-ms = <20>;
         };
-    scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
+
+        scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
 
             tap-ms = <20>;
         };
- 
     };
 
     keymap {
@@ -119,23 +119,23 @@
 
         layer_1 {
             bindings = <
-&shift_up_D        &kp LA(RIGHT_BRACKET)  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp HASH                                        &kp CARET      &kp LA(UP_ARROW)  &kp LA(DOWN)   &tog_ls_on  &kp PLUS
-&kp SPACE          &kp EXCLAMATION        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK                    &win2_bt_layer  &kp LA(LEFT)   &mkp MB1          &kp F8         &mkp MB2    &kp MINUS
-&kp DOUBLE_QUOTES  &kp AMPERSAND          &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN   &ipad_bt_layer    &win_bt_layer   &kp LA(RIGHT)  &kp EQUAL         &kp BACKSPACE  &mkp MB3    &kp LESS_THAN
-&kp DOLLAR         &kp CARET              &trans                &trans                 &trans        &trans            &trans          &kp ENTER                                                   &kp GREATER_THAN
+&shift_up_D        &kp LA(RIGHT_BRACKET)  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp HASH                                        &kp CARET      &kp LA(UP_ARROW)  &kp LA(DOWN)          &tog_ls_on         &kp PLUS
+&kp SPACE          &kp EXCLAMATION        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK                    &win2_bt_layer  &kp LA(LEFT)   &mkp MB1          &kp LS(LG(UP_ARROW))  &mkp MB2           &kp TILDE
+&kp DOUBLE_QUOTES  &kp AMPERSAND          &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN   &ipad_bt_layer    &win_bt_layer   &kp LA(RIGHT)  &kp LA(LG(LEFT))  &kp LA(LG(DOWN))      &kp LA(LG(RIGHT))  &kp LESS_THAN
+&kp DOLLAR         &kp CARET              &trans                &trans                 &trans        &trans            &trans          &kp ENTER                                                                 &kp GREATER_THAN
             >;
 
             sensor-bindings =
-      <&scroll_left_right>,
-      <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+                <&scroll_left_right>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         layer_2 {
             bindings = <
-&kp LCTRL  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS                                &kp BACKSLASH  &trans    &mkp MB3      &kp LCTRL  &kp TAB
-&kp SQT    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON                        &trans  &kp SEMICOLON  &mkp MB1  &kp UP_ARROW  &mkp MB2   &kp COLON
-&kp SLASH  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp UNDERSCORE  &trans           &trans  &kp PIPE       &kp LEFT  &kp DOWN      &kp RIGHT  &trans
-&kp ESC    &kp NUMBER_0     &trans           &kp DELETE       &kp ENTER       &kp BACKSPACE    &trans  &trans                                            &trans
+&kp LCTRL  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS                                               &kp BACKSLASH  &kp PERCENT  &mkp MB3      &kp LCTRL  &kp TAB
+&kp SQT    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON                         &kp LS(LG(NUMBER_3))  &kp SEMICOLON  &mkp MB1     &kp UP_ARROW  &mkp MB2   &kp COLON
+&kp GRAVE  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp UNDERSCORE  &kp LS(LG(N5))    &kp LS(LG(NUMBER_4))  &kp PIPE       &kp LEFT     &kp DOWN      &kp RIGHT  &kp EQUAL
+&kp ESC    &kp NUMBER_0     &trans           &kp DELETE       &kp ENTER       &kp BACKSPACE     &trans                &trans                                               &kp LA(LG(F))
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -143,10 +143,10 @@
 
         layer_3 {
             bindings = <
-&kp LA(LG(PIPE))  &kp LS(LG(LEFT_ARROW))  &kp UP_ARROW            &kp LC(TAB)              &kp LA(LC(ENTER))                    &trans            &kp LS(LC(TAB))  &kp LC(TAB)    &kp LG(MINUS)  &kp LG(PLUS)
-&kp TAB           &kp LS(LG(RIGHT))       &kp LA(LC(LEFT_ARROW))  &kp LC(LA(RIGHT))        &kp LA(LC(G))                &trans  &kp LC(UP_ARROW)  &kp LG(A)        &kp LG(C)      &kp LG(V)      &kp LS(LG(T))
-&mkp MB4          &mkp MB5                &kp LC(LA(D))           &kp LC(LA(RIGHT_ARROW))  &kp LA(LC(F))      &trans    &trans  &kp LG(UP_ARROW)  &kp LC(LEFT)     &kp LC(RIGHT)  &kp LC(DOWN)   &trans
-&trans            &trans                  &trans                  &trans                   &trans             &trans    &trans  &trans                                                           &trans
+&kp LA(LG(PIPE))    &kp LS(LG(LEFT_ARROW))  &kp UP_ARROW            &kp LC(TAB)              &kp LA(LC(ENTER))                             &kp LG(TAB)       &kp LS(LC(TAB))  &kp LC(TAB)    &kp LG(MINUS)  &kp LG(PLUS)
+&kp TAB             &kp LS(LG(RIGHT))       &kp LA(LC(LEFT_ARROW))  &kp LC(LA(RIGHT))        &kp LA(LC(G))                &kp LG(LA(ESC))  &kp LC(UP_ARROW)  &kp LG(A)        &kp LG(C)      &kp LG(V)      &kp LS(LG(T))
+&kp LG(LEFT_ARROW)  &kp LG(RIGHT)           &kp LC(LA(D))           &kp LC(LA(RIGHT_ARROW))  &kp LA(LC(F))      &trans    &kp LG(O)        &kp LG(UP_ARROW)  &kp LC(LEFT)     &kp LC(RIGHT)  &kp LC(DOWN)   &kp LS(LG(T))
+&kp LG(Z)           &kp LS(LG(Z))           &trans                  &trans                   &trans             &trans    &trans           &trans                                                           &kp LS(LG(O))
             >;
 
             sensor-bindings =
