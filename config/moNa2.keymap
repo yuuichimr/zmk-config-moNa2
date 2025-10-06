@@ -143,7 +143,7 @@
 
         layer_3 {
             bindings = <
-&kp LA(LG(PIPE))    &kp LS(LG(LEFT_ARROW))  &kp UP_ARROW            &kp LS(LG(RIGHT_BRACKET))              &kp LA(LC(ENTER))                             &kp LG(TAB)       &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))    &kp LG(MINUS)  &kp LG(PLUS)
+&kp LA(LG(PIPE))    &kp LS(LG(LEFT_ARROW))  &kp UP_ARROW            &kp LA(LG(RIGHT))              &kp LA(LC(ENTER))                             &kp LG(TAB)       &kp LA(LG(LEFT))  &kp LA(LG(RIGHT))    &kp LG(MINUS)  &kp LG(PLUS)
 &kp TAB             &kp LS(LG(RIGHT))       &kp LA(LC(LEFT_ARROW))  &kp LC(LA(RIGHT))        &kp LA(LC(G))                &kp LG(LA(ESC))  &kp LC(UP_ARROW)  &kp LG(A)        &kp LG(C)      &kp LG(V)      &kp LS(LG(T))
 &kp LG(LEFT_ARROW)  &kp LG(RIGHT)           &kp LC(LA(D))           &kp LC(LA(RIGHT_ARROW))  &kp LA(LC(F))      &trans    &kp LG(O)        &kp LG(UP_ARROW)  &kp LC(LEFT)     &kp LC(RIGHT)  &kp LC(DOWN)   &kp LS(LG(T))
 &kp LG(Z)           &kp LS(LG(Z))           &trans                  &trans                   &trans             &trans    &trans           &trans                                                           &kp LS(LG(O))
